@@ -9,7 +9,7 @@
     <meta name="description" content="CIPHS is a decentralize Digital Cash with open source software to be use by anyone without involvement of 3rd parties for transfer. Ciphscoin is secured by PoW blockchain protocol with Equihash algorithm, and additional Z layer for private transfer. Ciphscoin Software are free to be use without limititation and warranty. Use at your own risk.">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?h=e04df210c14099a666c68d30cfd261da">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?h=f2fff952e60c00e49b48eb8a55b0ca55">
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=16cf3158d7b7f4222a01004ed72339e6">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=548f70004360019a44c48fa2610ea2ae">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css?h=18313f04cea0e078412a028c5361bd4e">
@@ -46,47 +46,46 @@
             <div class="tab-content">
                 <div class="tab-pane" role="tabpanel" id="tab-1">
                     <h5></h5>
+                    <h6 style="margin: 30px 0px 0px 0px;color: rgb(23,218,192);"><br><strong>Compiling CPN from Ciphscoin repo are the safest way to access to Ciphscoin.&nbsp;&nbsp;</strong><br><strong>These are guide for Ubuntu/Linux based machine.</strong><br><br></h6>
                     <h5 style="margin: 30px 0px 0px 0px;"># Installing dependencies<br></h5>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">sudo apt-get update<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev
-                        libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang<br></p>
+                    <p class="text-monospace text-left border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 1% 0% 1% 20%;background-color: #314c67;width: 60%;">sudo apt-get update<br><br>sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler
+                        libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang<br></p>
                     <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"># Install nanomsg<br></h5>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd ~<br></p>
-                    <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">git clone&nbsp;<a href="https://github.com/nanomsg/nanomsg">https://github.com/nanomsg/nanomsg</a><br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd nanomsg<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cmake . -DNN_TESTS=OFF -DNN_ENABLE_DOC=OFF<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">make -j2<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">sudo make install<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">sudo ldconfig<br></p>
+                    <p class="text-monospace text-left border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 1% 0% 1% 20%;background-color: #314c67;width: 60%;">cd ~<br><br>git clone&nbsp;<a href="https://github.com/nanomsg/nanomsg">https://github.com/nanomsg/nanomsg</a><br><br>cd nanomsg<br><br>cmake . -DNN_TESTS=OFF -DNN_ENABLE_DOC=OFF<br><br>make -j2<br><br>sudo make install<br><br>sudo
+                        ldconfig<br></p>
                     <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"># Compiling CPN Daemon<br></h5>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd ~<br></p>
-                    <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">git clone <a href="https://github.com/ciphscoin/cpn">https://github.com/ciphscoin/cpn</a><br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd cpn<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">git checkout dev<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">./zcutil/fetch-params.sh<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">./zcutil/build.sh -j2<br></p>
+                    <p class="text-monospace text-left border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 1% 0% 1% 20%;background-color: #314c67;width: 60%;">cd ~<br><br>git clone&nbsp;<a href="https://github.com/ciphscoin/cpn"><span style="text-decoration: underline;">https://github.com/ciphscoin/cpn</span></a><br><br>cd cpn<br><br>git checkout dev<br><br>./zcutil/fetch-params.sh<br><br>./zcutil/build.sh
+                        -j2<br></p>
                     <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"># Launching CPN<br></h5>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd ~<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd cpn/src<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">use Screen to attach CPN terminal, execute:<br>screen -S cpn<br></p>
-                    <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Deploy CPN with exact parameter below:<br>./komodod -ac_name=CIPHS -ac_supply=6000000 -ac_reward=0,9998452,77000000,129680190,210000000,150000000,100000000 -ac_eras=7 -ac_end=7200,50400,2556000,12780000,12780000,17892000,0 -ac_decay=100000000,100000000,100000000,100000000,100000000,100000000,100000000
+                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 1% 0% 1% 20%;background-color: #314c67;width: 60%;">cd ~<br><br>cd cpn/src<br></p>
+                    <p><br>Optionally, use Screen to attach CPN terminal, execute:<br><br></p>
+                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 1% 0% 1% 20%;background-color: #314c67;width: 60%;">screen -S cpn<br></p>
+                    <p style="color: rgb(245,196,11);font-size: 20px;"><strong><em>Deploy CPN with exact parameter below, execute:</em></strong><br></p>
+                    <p class="text-monospace text-break text-left border rounded-0 border-warning shadow" style="padding: 10px 10px 10px 10px;margin: 1% 0% 1% 20%;background-color: #314c67;width: 60%;">./komodod -ac_name=CIPHS -ac_supply=6000000 -ac_reward=0,9998452,77000000,129680190,210000000,150000000,100000000 -ac_eras=7 -ac_end=7200,50400,2556000,12780000,12780000,17892000,0 -ac_decay=100000000,100000000,100000000,100000000,100000000,100000000,100000000
                         -ac_halving=1 -ac_adaptivepow=1 -ac_blocktime=12 -ac_cbmaturity=1000 -ac_sapling=1 -ac_snapshot=7200 -ac_cc=313 -ac_ccenable=225,226,227,228,231,232,234,235,236,237,238,239,240,241,242,243 -addnode=152.89.247.97 -addnode=212.114.52.2
                         &amp;<br></p>
-                    <p class="text-monospace text-truncate text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">CTRL A + CTRL D to detach CPN Screen [screen -r cpn to reattach] <br>Now launch Ciphscoin mining using cli:<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">./komodo-cli -ac_name=CIPHS setgenerate true J <br>J represent CPU Core. If 4 then set 4. Want to use 2 core, typing 2 it is.<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Get wallet address<br>./komodo-cli -ac_name=CIPHS getaccountaddress ""<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">For blockhain info<br>./komodo-cli -ac_name=CIPHS getinfo<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">To check current circulating supply<br>./komodo-cli -ac_name=CIPHS getblocksupply &gt;Highest.Block&lt;<br>Change &gt;highest.block&lt; with current block from getinfo<br></p>
-                    <p class="text-monospace text-justify border rounded-0 border-success"
-                        style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">For all command line available<br>./komodo-cli -ac_name=CIPHS help<br></p>
-                    <p class="text-justify" style="padding: 0% 0% 0% 25%;width: 70%;"><br># As tested on Ubuntu 18.04 - No known issue<br># As tested on Ubuntu 20.04 - No libqt4-dev dependencies for Ubuntu 20.04, use PPA to add one. Then continue as usual.<br># Have issue? Great, visit repo and let's figure it out.<br><br></p>
+                    <p><br>If no error seeing, mean the launch has been success.<br>CTRL A + CTRL D to detach CPN Screen <br>[screen -r cpn to reattach]&nbsp;<br>Now launch Ciphscoin mining using cli:<br>J represent CPU Core. If 4 then set 4.<br><br></p>
+                    <p
+                        class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 0% 0% 0% 20%;background-color: #314c67;width: 60%;">./komodo-cli -ac_name=CIPHS setgenerate true J <br></p>
+                        <p><br>Retrieve wallet info, execute:<br><br></p>
+                        <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 0% 0% 0% 20%;background-color: #314c67;width: 60%;">./komodo-cli -ac_name=CIPHS getwalletinfo<br></p>
+                        <p><br>Retrieve blockchain info, execute:<br><br></p>
+                        <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 0% 0% 0% 20%;background-color: #314c67;width: 60%;">./komodo-cli -ac_name=CIPHS getinfo<br></p>
+                        <p><br>Retrieve&nbsp;current circulating supply,&nbsp;execute:<br>Change {HighestBlock} with current block from getinfo<br><br></p>
+                        <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 0% 0% 0% 20%;background-color: #314c67;width: 60%;">./komodo-cli -ac_name=CIPHS getblocksupply {HighestBlock}<br></p>
+                        <p><br>To retrieve all command list, execute:<br><br></p>
+                        <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 10px 10px 10px;margin: 0% 0% 0% 20%;background-color: #314c67;width: 60%;">./komodo-cli -ac_name=CIPHS help<br></p>
+                        <p><br>Congratulation Human, now you have the access to all technology within CPN.&nbsp;<br>Always remember, "Your Keys, Your CIPHS"<br>Join <a href="https://discord.gg/fEq6QeSuQh_blank">Discord</a> to hangout with other fellow Ciphsterian</p>
+                        <p
+                            class="text-justify" style="padding: 0% 0% 0% 20%;width: 80%;"><br># As tested on Ubuntu 18.04 - No known issue<br># As tested on Ubuntu 20.04 - No libqt4-dev dependencies for Ubuntu 20.04, use PPA to add one. Then continue as usual.<br># Have issue? Great, <a href="https://github.com/ciphscoin/">visit repo</a>                            and let's figure it out.<br><br></p>
                 </div>
                 <div class="tab-pane active" role="tabpanel" id="tab-2">
+                    <h6 style="margin: 30px 0px 0px 0px;color: rgb(23,218,192);"><br><strong>Compiling CPN from Ciphscoin repo are the safest way to access to Ciphscoin.&nbsp;&nbsp;</strong><br><strong>These are guide for Windows based machine.</strong><br><br></h6>
                     <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Install dependencies</strong><br></h5>
                     <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python python-zmq zlib1g-dev wget libcurl4-gnutls-dev bsdmainutils automake curl libsodium-dev cmake mingw-w64<br></p>
                     <h5
                         data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Install Rust</strong><br></h5>
-                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">curl https://sh.rustup.rs -sSf | sh<br>source $HOME/.cargo/env<br>rustup target add x86_64-pc-windows-gnu<br></p>
+                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">curl https://sh.rustup.rs -sSf | sh<br><br>source $HOME/.cargo/env<br><br>rustup target add x86_64-pc-windows-gnu<br></p>
                         <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Configure the compiler to use POSIX thread model</strong><br></h5>
                         <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Execute:&nbsp;<br>sudo update-alternatives --config x86_64-w64-mingw32-gcc<br></p>
                         <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">After executing the above command, select the POSIX option:<br><br> Selection Path Priority Status<br>------------------------------------------------------------<br> 0 /usr/bin/x86_64-w64-mingw32-gcc-win32 60 auto mode<br> 1 /usr/bin/x86_64-w64-mingw32-gcc-posix
@@ -116,19 +115,59 @@
                             <p
                                 class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">After pasting, save and exit Notepad.<br></p>
                                 <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">mkdir “%HOMEPATH%\AppData\Roaming\ZcashParams”<br></p>
-                                <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Download following files and move them into the new directory.<br>sprout-proving.key(opens new window)<br>sprout-verifying.key(opens new window)<br>sapling-spend.params(opens new window)<br>sapling-output.params(opens new
-                                    window)<br>sprout-groth16.params(opens new window)<br></p>
-                                <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Run Smart Chain Software</strong><br></h5>
-                                <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">"%HOMEPATH%\Desktop\ciphs\komodod.exe"<br></p>
-                                <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Verify Syncing Progress</strong><br></h5>
-                                <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">"%HOMEPATH%\Desktop\kmd\komodo-cli.exe" getinfo<br></p>
-                                <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Backup Your Wallet</strong><br></h5>
-                                <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">We can not stress enough the importance of backing up your&nbsp;wallet.dat&nbsp;file.On Windows, the file is located here:&nbsp;%HOMEPATH%\AppData\Roaming\ciphscoin\wallet.datOne method to backup this file is to create
-                                    a copy and archive it.<br></p>
-                                <p></p>
+                                <p class="text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Download following files and move them into the new directory.<br><a href="https://z.cash/downloads/sprout-proving.key">sprout-proving.key(opens new window)</a><br><a href="https://z.cash/downloads/sprout-verifying.key">sprout-verifying.key(opens new window)</a><br>
+                                    <a
+                                        href="https://z.cash/downloads/sapling-spend.params">sapling-spend.params(opens new window)</a><br><a href="https://z.cash/downloads/sapling-output.params">sapling-output.params(opens new window)</a><br><a href="https://z.cash/downloads/sprout-groth16.params">sprout-groth16.params(opens new window)</a><br></p>
+                                <h5
+                                    data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Run Smart Chain Software</strong><br></h5>
+                                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">"%HOMEPATH%\Desktop\ciphs\komodod.exe"<br></p>
+                                    <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Verify Syncing Progress</strong><br></h5>
+                                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">"%HOMEPATH%\Desktop\ciphs\komodo-cli.exe"&nbsp;getinfo<br></p>
+                                    <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Backup Your Wallet</strong><br></h5>
+                                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">We can not stress enough the importance of backing up your&nbsp;wallet.dat&nbsp;file.On Windows, the file is located here:&nbsp;%HOMEPATH%\AppData\Roaming\ciphscoin\wallet.datOne method to backup this file is to create
+                                        a copy and archive it.<br></p>
+                                    <p></p>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="tab-3">
-                    <p>Content for tab 3.</p>
+                    <h6 style="margin: 30px 0px 0px 0px;color: rgb(23,218,192);"><br><strong>Compiling CPN from Ciphscoin repo are the safest way to access to Ciphscoin.&nbsp;&nbsp;</strong><br><strong>These are guide for Debian based machine.</strong><br><br></h6>
+                    <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Requirements</strong><br></h5>
+                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">OSX (version &gt; 10.11) <br>Minimum 4GB of free RAM (8GB+ recommended)<br></p>
+                    <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Ensure Command Line Tools are Installed.</strong><br></h5>
+                    <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Issue the following command in a terminal:<br><br>xcode-select --install<br></p>
+                    <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Ensure brew is Installed</strong><br></h5>
+                    <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">We use the software&nbsp;brew&nbsp;to install dependencies. If you have the latest version of&nbsp;brew&nbsp;installed already, you may skip this step.<br><br><br>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"<br></p>
+                    <h5
+                        data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Use brew to Install Dependencies</strong><br></h5>
+                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Execute each command separately:<br><br>brew update<br>brew upgrade<br>brew tap discoteq/discoteq; brew install flock<br>brew install autoconf autogen automake<br>brew install gcc@8<br>brew install binutils<br>brew install protobuf<br>brew
+                            install coreutils<br>brew install wget<br></p>
+                        <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Clone the Ciphscoin repository</strong><br></h5>
+                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">git clone <a href="https://github.com/ciphscoin/cpn">https://github.com/ciphscoin/cpn</a><br></p>
+                        <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Fetch the Zcash Parameters:</strong><br></h5>
+                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd cpn<br>./zcutil/fetch-params.sh<br></p>
+                        <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Compile Ciphscoin</strong><br></h5>
+                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">git checkout dev<br>./zcutil/build-mac.sh -j8<br></p>
+                        <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Create Configuration File</strong><br></h5>
+                        <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Create the configuration file in the following directory:<br><br>~/Library/Application\ Support/ciphscoin<br><br>If the directory does not yet exist, create the directory.<br><br>mkdir ~/Library/Application\ Support/ciphscoin<br><br>Create
+                            the configuration file by entering the following commands in the terminal. Execute each line separately.<br><br>echo "rpcuser=komodouser" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br>echo "rpcpassword=`head
+                            -c 32 /dev/urandom | base64`" &gt;&gt; ~/Library/Application\ Support/<br>ciphscoin/komodo.conf<br>echo "txindex=1" &gt;&gt; ~/Library/Application\ Support/<br>ciphscoin/komodo.conf<br>echo "bind=127.0.0.1" &gt;&gt; ~/Library/Application\
+                            Support/<br>ciphscoin/komodo.conf<br>echo "rpcbind=127.0.0.1" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br>echo "addnode=5.9.102.210" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br>echo
+                            "addnode=78.47.196.146" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br>echo "addnode=178.63.69.164" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br>echo "addnode=88.198.65.74" &gt;&gt; ~/Library/Application\
+                            Support/ciphscoin/komodo.conf<br>echo "addnode=5.9.122.241" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br>echo "addnode=144.76.94.38" &gt;&gt; ~/Library/Application\ Support/ciphscoin/komodo.conf<br></p>
+                        <h5
+                            data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Run Komodo</strong><br></h5>
+                            <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">Once all processes are complete, run the cpn daemon.<br><br>cd ~/cpn/src<br><br>./ciphs &amp;<br></p>
+                            <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;">#<strong>Track the Syncing Progress&nbsp;</strong><br></h5>
+                            <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Using the tail Command</strong><br></h5>
+                            <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">tail -f ~/Library/Application\ Support/ciphscoin/debug.log<br></p>
+                            <h5 data-aos="fade" data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Using komodo-cli and getinfo</strong><br></h5>
+                            <p class="text-monospace text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;">cd ~/ciphs/src<br><br>./komodo-cli getinfo<br><br>When the returned properties of&nbsp;blocks&nbsp;and&nbsp;longestchain&nbsp;are equal to each other, the daemon is finished syncing with the network.<br></p>
+                            <h5 data-aos="fade"
+                                data-aos-duration="900" style="margin: 10px 0px 0px 0px;"><strong>#Backup Your Wallet</strong><br></h5>
+                            <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;"><br>We can not stress enough the importance of backing up your&nbsp;wallet.dat&nbsp;file.On MacOS, the file is located here:<br><br>~/Library/Application\Support/ciphscoin/wallet.datOne <br><br>method to backup this file is
+                                to archive a copy of the file.<br><br></p>
+                            <p class="text-monospace text-break text-justify border rounded-0 border-success" style="padding: 10px 50px 10px 50px;margin: 1% 0% 1% 25%;background-color: #314c67;width: 50%;"><br>#Copy the file<br><br>cp av~/Library/Application\Support/ciphscoin/wallet.dat ~/wallet.dat<br><br># Rename file<br><br>mv~/wallet.dat~/2019-05-17-wallet_backup.dat<br><br># To make archive<br><br>tar -czvf ~/2019-05-17-wallet_backup.dat.tgz
+                                ~/2019-05-17-wallet_backup.dat<br><br># Move the final file to a secure location<br><br></p>
+                            <p>do not cross the line</p>
                 </div>
             </div>
         </div>
